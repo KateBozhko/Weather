@@ -70,8 +70,9 @@ setClouds(result.weather[0].description)
 
 
   return (
-    <div>
+    <div className='position'>
     <Title/>
+    <div className='position_information'>
    <Buttons weatherMinsk = {weatherMinsk}
    weatherRome = {weatherRome}
    weatherBerlin = {weatherBerlin}/>
@@ -81,6 +82,7 @@ setClouds(result.weather[0].description)
    humidity = {humidity}
     pressure = {pressure}
     clouds = {clouds}/>
+    </div>
     </div>
   );
 }
