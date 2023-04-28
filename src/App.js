@@ -23,7 +23,6 @@ useEffect(() => {
 const weatherMinsk = async () => {
 const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=minsk&APPID=${API}`);
 const result = await response.json();
-console.log(result)
 setCity(result.name);
 setCountry(result.sys.country);
 setTemp(result.main.temp);
@@ -32,14 +31,14 @@ setPressure(result.main.pressure);
 setClouds(result.weather[0].description)
 }
 
-// запрос погоды для Рима
+// запрос погоды для Парижа
 
 useEffect(() => {
-  weatherRome();
+  weatherParis();
 }, [])
 
-const weatherRome = async () => {
-const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=rome&APPID=${API}`);
+const weatherParis = async () => {
+const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=paris&APPID=${API}`);
 const result = await response.json();
 console.log(result)
 setCity(result.name);
@@ -55,6 +54,7 @@ setClouds(result.weather[0].description)
 useEffect(() => {
   weatherBerlin();
 }, [])
+
 
 const weatherBerlin = async () => {
 const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=berlin&APPID=${API}`);
@@ -74,7 +74,7 @@ setClouds(result.weather[0].description)
     <Title/>
     <div className='position_information'>
    <Buttons weatherMinsk = {weatherMinsk}
-   weatherRome = {weatherRome}
+   weatherParis = {weatherParis}
    weatherBerlin = {weatherBerlin}/>
    <Information city = {city} 
    country = {country} 
