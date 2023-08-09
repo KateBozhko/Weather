@@ -1,8 +1,8 @@
 function Title() {
 return(
     <div className="main">
-    <h1>Приложение о погоде</h1>
-    <p className="find_out">Выберите город</p>
+    <h1>Weather app</h1>
+    <p className="find_out">Choose the city</p>
 </div>
 )
  
